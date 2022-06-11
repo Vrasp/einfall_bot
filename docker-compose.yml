@@ -11,6 +11,3 @@ services:
       - REDIS_NAMESPACE=einfall_bot
       - REDIS_URL=redis://<user>:<pass>@<host>:<port>
       # Recommend getting free redis cloud account for small apps (https://redis.com/redis-enterprise-cloud/overview/)
-
-volumes:
-  redis-data:
