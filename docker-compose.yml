@@ -1,0 +1,16 @@
+version: '3.9'
+services:
+  einfall-bot:
+    build: .
+    deploy:
+      restart_policy:
+        condition: any
+    environment:
+      - DISCORD_TOKEN=
+      - DISCORD_COMMAND_PREFIX=!
+      - REDIS_NAMESPACE=einfall_bot
+      - REDIS_URL=redis://<user>:<pass>@<host>:<port>
+      # Recommend getting free redis cloud account for small apps (https://redis.com/redis-enterprise-cloud/overview/)
+
+volumes:
+  redis-data:
